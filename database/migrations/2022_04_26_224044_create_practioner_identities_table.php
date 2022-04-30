@@ -15,7 +15,7 @@ class CreatePractionerIdentitiesTable extends Migration
     {
         Schema::create('practioner_identities', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('practioner_id');
+            $table->foreignId('practioner_id')->nullable();
             $table->string('nin',14)->nullable();
             $table->string('cardNo',14)->nullable();
             $table->string('passportNo',14)->nullable();

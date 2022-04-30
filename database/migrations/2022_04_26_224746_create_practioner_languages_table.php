@@ -16,7 +16,7 @@ class CreatePractionerLanguagesTable extends Migration
         Schema::create('practioner_languages', function (Blueprint $table) {
             $table->id();
             $table->foreignId('practioner_id');
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('proficiency')->nullable();
             $table->timestamps();
 

@@ -16,7 +16,7 @@ class CreatePractionerLicencesTable extends Migration
         Schema::create('practioner_licences', function (Blueprint $table) {
             $table->id();
             $table->foreignId('practioner_id');
-            $table->string('professionalCouncil');
+            $table->string('professionalCouncil')->nullable();
             $table->string('dateOfIssue')->nullable();
             $table->string('dateOfExpiry')->nullable();
             $table->string('attachment')->nullable();

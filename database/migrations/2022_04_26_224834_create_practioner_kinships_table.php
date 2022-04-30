@@ -16,8 +16,8 @@ class CreatePractionerKinshipsTable extends Migration
         Schema::create('practioner_kinships', function (Blueprint $table) {
             $table->id();
             $table->foreignId('practioner_id');
-            $table->string('name');
-            $table->string('type');
+            $table->string('name')->nullable();
+            $table->string('type')->nullable();
             $table->timestamps();
         });
         /*

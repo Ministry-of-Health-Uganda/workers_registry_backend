@@ -16,7 +16,7 @@ class CreatePractionerGazettesTable extends Migration
         Schema::create('practioner_gazettes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('practioner_id');
-            $table->string('registrationNo');
+            $table->string('registrationNo')->nullable();
             $table->string('startDate')->nullable();;
             $table->string('endDate')->nullable();
             $table->timestamps();

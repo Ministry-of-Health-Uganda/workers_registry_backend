@@ -21,7 +21,8 @@ class PractionersController extends Controller
      */
     public function index()
     {
-        $this->practionRepo->generateLinks();
+        //$this->practionRepo->generateLinks();
+        $this->practionRepo->fetchData();
     }
 
     /**

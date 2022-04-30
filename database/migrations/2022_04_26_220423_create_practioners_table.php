@@ -15,8 +15,8 @@ class CreatePractionersTable extends Migration
     {
         Schema::create('practioners', function (Blueprint $table) {
             $table->id();
-            $table->string("surname");
-            $table->string("firstname");
+            $table->string("surname")->nullable();
+            $table->string("firstname")->nullable();
             $table->string("othername")->nullable();
             $table->string("gender")->nullable();
             $table->string("maritalStatus")->nullable();

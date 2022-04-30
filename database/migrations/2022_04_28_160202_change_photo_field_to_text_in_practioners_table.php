@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDataLinksTable extends Migration
+class ChangePhotoFieldToTextInPractionersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateDataLinksTable extends Migration
      */
     public function up()
     {
-        Schema::create('data_links', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('data_source_id');
-            $table->text('url')->nullable();
-            $table->string('status')->nullable();
-            $table->timestamps();
+        Schema::table('practioners', function (Blueprint $table) {
+            
+            $table->text('photo')->change();
         });
     }
 
@@ -29,6 +26,8 @@ class CreateDataLinksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_links');
+        Schema::table('practioners', function (Blueprint $table) {
+            $table->string('photo')->change();
+        });
     }
 }

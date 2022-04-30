@@ -16,7 +16,7 @@ class CreatePractionerCitizenshipsTable extends Migration
         Schema::create('practioner_citizenships', function (Blueprint $table) {
             $table->id();
             $table->foreignId('practioner_id');
-            $table->string('country');
+            $table->string('country')->nullable();
             $table->timestamps();
 
             /*

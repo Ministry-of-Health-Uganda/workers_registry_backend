@@ -17,7 +17,7 @@ class CreatePractionerRegistrationsTable extends Migration
         Schema::create('practioner_registrations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('practioner_id');
-            $table->string('professionalCouncil');
+            $table->string('professionalCouncil')->nullable();
             $table->string('dateOfRegistration')->nullable();
             $table->string('registrationNo')->nullable();
             $table->timestamps();

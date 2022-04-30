@@ -15,8 +15,8 @@ class CreateDataSourcesTable extends Migration
     {
         Schema::create('data_sources', function (Blueprint $table) {
             $table->id();
-            $table->string('code');
-            $table->string('base_url');
+            $table->string('code')->nullable();
+            $table->string('base_url')->nullable();
             $table->text('api_key')->nullable();
             $table->timestamps();
         });
